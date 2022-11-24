@@ -1,11 +1,13 @@
 const App = () => {
   const navigation = [
-    { title: "Self Development", path: "/self-development" },
-    { title: "Health", path: "/health" },
-    { title: "Technology", path: "/technology" },
-    { title: "Trends", path: "/trends" },
-    { title: "News", path: "/news" },
-    { title: "Travel", path: "/travel" },
+    { title: "Solidity", path: "/solidity" },
+    { title: "Hardhat", path: "/hardhat" },
+    { title: "NextJS", path: "/nextjs" },
+    { title: "Javascript", path: "/javascript" },
+    { title: "Styling", path: "/styling" },
+    { title: "GraphQL", path: "/graphql" },
+    { title: "Security", path: "/security" },
+    { title: "TheGraph", path: "/thegraph" },
     { title: "About", path: "/about" },
   ];
 

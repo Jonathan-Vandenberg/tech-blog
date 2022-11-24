@@ -10,7 +10,7 @@ export default function App() {
         </div>
         <div className="flex-1 max-w-lg py-5 sm:mx-auto sm:text-center lg:max-w-max lg:text-left">
           <h3 className="text-3xl bg-white text-gray-500 font-semibold md:text-4xl text-center">
-            <span className="text-black">Full Spectrum </span> Programming
+            Programming <span className="text-black">Web2 & Blockchain</span>
           </h3>
         </div>
       </div>

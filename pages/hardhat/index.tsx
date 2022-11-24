@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import Card from "../../components/AllPostsCard";
 import FeaturedPostsByCategory from "../../components/FeaturedPostsByCategory";
 import HeaderCategories from "../../components/HeaderCategories";
-import { getSEOPosts } from "../../services";
+import { getHardhatPosts } from "../../services";
 import { useState } from "react";
 
 export default function Index({ posts }: any) {
@@ -18,13 +18,13 @@ export default function Index({ posts }: any) {
   return (
     <>
       <Head>
-        <title>SEO</title>
+        <title>Hardhat</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
           content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
         ></meta>
-        <meta property="og:title" content="SEO" />
+        <meta property="og:title" content="Hardhat" />
         <meta
           property="og:description"
           content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
@@ -37,15 +37,15 @@ export default function Index({ posts }: any) {
         <meta property="og:image:height" content="900" />
       </Head>
       <HeaderCategories
-        categoryName={"SEO"}
-        categoryDescription={"Finding the perfect travel destination for you"}
+        categoryName={"HARDHAT"}
+        categoryDescription={"Ethereum development environment"}
       />
       <section>
         <div className="container max-w-6xl font-semi-bold text-gray-600 mx-auto text-2xl pt-12 pb-2 px-6">
           Featured Posts
         </div>
         <div className="container max-w-6xl px-6 mx-auto space-y-6 sm:space-y-12">
-          <FeaturedPostsByCategory category="SEO" />
+          <FeaturedPostsByCategory category="HARDHAT" />
           <div className="">
             <div className="font-semi-bold text-gray-600 text-2xl mb-2">
               All Posts
@@ -71,7 +71,7 @@ export default function Index({ posts }: any) {
 
 // Fetch data at build time
 export async function getStaticProps() {
-  const posts = (await getSEOPosts()) || [];
+  const posts = (await getHardhatPosts()) || [];
   return {
     props: { posts },
   };

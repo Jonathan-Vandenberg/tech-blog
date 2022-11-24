@@ -5,7 +5,7 @@ import Profile from "../components/Profile";
 export default function App() {
   return (
     <>
-      <div className="py-12">
+      <div className="py-12 mt-12">
         <Hero />
       </div>
       <TechStack />

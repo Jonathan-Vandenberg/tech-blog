@@ -1,12 +1,15 @@
 import javascriptImage from "../public/categories/javascriptImage.png";
 import GraphQLLogo from "../public/categories/GraphQLLogo.png";
-import SEOImage from "../public/categories/SEOImage.png";
+import theGraphImage from "../public/categories/theGraphImage.svg";
 import taiwindcssLogo from "../public/categories/tailwindLogo.png";
 import travelImage from "../public/categories/solidityLogo.png";
 import securityLogo from "../public/categories/securityLogo.png";
+import hardhatImage from "../public/categories/hardhatLogo.png";
+import nextJSLogo from "../public/categories/nextJSLogoSquare.png";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import next from "next";
 
 export default function App({
   categoryName,
@@ -41,6 +44,12 @@ export default function App({
       case "SEO":
         setStyle("p-5 mx-auto sm:p-10");
         break;
+      case "HARDHAT":
+        setStyle("p-5 mx-auto sm:p-10");
+        break;
+      case "NEXTJS":
+        setStyle("p-5 mx-auto sm:p-10");
+        break;
     }
   };
 
@@ -60,8 +69,12 @@ export default function App({
                 ? travelImage
                 : categoryName === "SECURITY"
                 ? securityLogo
-                : categoryName === "SEO"
-                ? SEOImage
+                : categoryName === "THEGRAPH"
+                ? theGraphImage
+                : categoryName === "HARDHAT"
+                ? hardhatImage
+                : categoryName === "NEXTJS"
+                ? nextJSLogo
                 : ""
             }
             layout="responsive"

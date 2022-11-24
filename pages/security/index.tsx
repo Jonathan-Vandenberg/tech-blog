@@ -38,7 +38,7 @@ export default function Index({ posts }: any) {
       </Head>
       <HeaderCategories
         categoryName={"SECURITY"}
-        categoryDescription={"Keep up-to-date with the latest news"}
+        categoryDescription={"Slither, the Solidity source analyzer"}
       />
       <section>
         <div className="container max-w-6xl text-gray-600 font-semibold mx-auto text-2xl pt-12 pb-2 px-6">

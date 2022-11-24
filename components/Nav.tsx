@@ -7,12 +7,14 @@ export default function App() {
   const [state, setState] = useState(false);
 
   const navigation = [
+    { title: "Solidity", path: "/solidity" },
+    { title: "Hardhat", path: "/hardhat" },
+    { title: "NextJS", path: "/nextjs" },
     { title: "Javascript", path: "/javascript" },
     { title: "Styling", path: "/styling" },
     { title: "GraphQL", path: "/graphql" },
-    { title: "Solidity", path: "/solidity" },
     { title: "Security", path: "/security" },
-    { title: "SEO", path: "/seo" },
+    { title: "TheGraph", path: "/thegraph" },
     { title: "About", path: "/about" },
   ];
 

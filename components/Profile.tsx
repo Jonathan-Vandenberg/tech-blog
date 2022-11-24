@@ -9,7 +9,7 @@ export default function App() {
           <Image
             src={jonProfile}
             alt="Author Image"
-            className="self-center flex-shrink-0 w-24 h-24 border rounded-full md:justify-self-start bg-gray-500 border-gray-700"
+            className="self-center flex-shrink-0 w-42 h-42 border rounded-full md:justify-self-start bg-gray-500 border-gray-700"
             width={200}
             height={200}
           />
@@ -19,9 +19,9 @@ export default function App() {
             Jonathan van den Berg
           </h4>
           <p className="text-white pt-2 max-w-[400px] mx-auto">
-            Jon is a full stack web developer using the most modern frameworks
-            and techniques. Specializing in performance and SEO efficiency, Jon
-            loves fast and highly visible applications.
+            Jon is a full stack web developer based in Vietnam using the most
+            modern frameworks and techniques. Specializing in performance and
+            SEO efficiency, Jon loves fast and highly visible applications.
           </p>
           <div className="space-y-4 pt-8">
             <p className="flex items-center text-gray-100">

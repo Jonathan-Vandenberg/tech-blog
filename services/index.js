@@ -210,10 +210,64 @@ export const getSolidityPosts = async () => {
   return result.postsConnection.edges;
 };
 
-export const getSEOPosts = async () => {
+export const getTheGraphPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: SEO, AND: { featured: false } }) {
+      postsConnection(where: { category: THEGRAPH, AND: { featured: false } }) {
+        edges {
+          node {
+            content {
+              raw
+            }
+            coverImage {
+              url
+            }
+            category
+            createdAt
+            excerpt
+            slug
+            title
+          }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
+};
+
+export const getNextJSPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      postsConnection(where: { category: NEXTJS, AND: { featured: false } }) {
+        edges {
+          node {
+            content {
+              raw
+            }
+            coverImage {
+              url
+            }
+            category
+            createdAt
+            excerpt
+            slug
+            title
+          }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
+};
+
+export const getHardhatPosts = async () => {
+  const query = gql`
+    query MyQuery {
+      postsConnection(where: { category: HARDHAT, AND: { featured: false } }) {
         edges {
           node {
             content {

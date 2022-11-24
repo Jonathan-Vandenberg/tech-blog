@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps: { ...pageProps } }: AppProps<{}>) {
       <div className="absolute -z-10 w-full h-full sm-hidden">
         <BackgroundSVG height={size.height} width={size.width} />
       </div>
+
       <Component {...pageProps} />
       <Footer />
     </section>

@@ -6,6 +6,7 @@ import Button from "../components/Button";
 import Card from "../components/AllPostsCard";
 import FeaturedPosts from "../components/FeaturedPost";
 import { useState } from "react";
+import { useWindowSize } from "../utils/windowSize";
 
 export default function Index({ posts }: any) {
   const [addPosts, setAddPosts] = useState(6);

@@ -38,7 +38,7 @@ export default function Index({ posts }: any) {
       </Head>
       <HeaderCategories
         categoryName={"STYLING"}
-        categoryDescription={"Alternative for better health"}
+        categoryDescription={"Design structures and styling techniques"}
       />
       <section>
         <div className="container max-w-6xl mx-auto text-2xl pt-12 pb-2 px-6 text-gray-600 font-semibold">
