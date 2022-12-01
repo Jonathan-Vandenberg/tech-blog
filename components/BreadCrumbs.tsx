@@ -63,9 +63,9 @@ export default function App({ postCategory, title }: any) {
           <Link legacyBehavior href={"/"}>
             <a
               aria-label="home"
-              className="block transition-colors hover:text-gray-700"
+              className="block transition-colors hover:text-gray-700 dark:text-gray-200"
             >
-              <span className="sr-only"> Home </span>
+              <span className="sr-only "> Home </span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -88,7 +88,7 @@ export default function App({ postCategory, title }: any) {
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
+            className="h-4 w-4 dark:text-gray-200"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -104,7 +104,7 @@ export default function App({ postCategory, title }: any) {
           <Link legacyBehavior href={`/${link}`}>
             <a
               href="#"
-              className="block transition-colors hover:text-gray-700 text-xs"
+              className="block transition-colors hover:text-gray-700 text-xs dark:text-gray-200"
               aria-label={category}
             >
               {category}
@@ -115,7 +115,7 @@ export default function App({ postCategory, title }: any) {
         <li>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-4 w-4"
+            className="h-4 w-4 dark:text-gray-200"
             viewBox="0 0 20 20"
             fill="currentColor"
           >
@@ -130,7 +130,7 @@ export default function App({ postCategory, title }: any) {
         <li>
           <a
             href="#"
-            className="block transition-colors hover:text-gray-700 text-xs"
+            className="block transition-colors hover:text-gray-700 text-xs dark:text-gray-200"
           >
             {title}
           </a>

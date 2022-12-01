@@ -1,10 +1,42 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import logo from "../public/alt.png";
 import Image from "next/image";
 import Link from "next/link";
+import { useTheme } from "next-themes";
+import { MoonIcon, SunIcon } from "../components/icons/icons";
 
 export default function App() {
   const [state, setState] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "dark") {
+      return (
+        <div
+          className="w-7 h-7 text-gray-8200"
+          role="button"
+          onClick={() => setTheme("light")}
+        >
+          <SunIcon />
+        </div>
+      );
+    } else {
+      return (
+        <div className="w-7 h-7" role="button" onClick={() => setTheme("dark")}>
+          <MoonIcon />
+        </div>
+      );
+    }
+  };
 
   const navigation = [
     { title: "Solidity", path: "/solidity" },
@@ -19,13 +51,13 @@ export default function App() {
   ];
 
   return (
-    <nav className="bg-white/90 w-full border-b md:border-0 md:static relative">
+    <nav className="bg-white/90 dark:bg-gray-800/90 w-full  md:static relative py-2">
       <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-2 md:py-2 md:block">
+        <div className="flex items-center justify-between md:block">
           <div className="flex space-x-8 items-baseline">
             <div className="w-10 h-10 cursor-pointer">
               <Link legacyBehavior href={"/"}>
-                <div>
+                <div className="dark:bg-white p-1">
                   <Image
                     src={logo}
                     width={300}
@@ -36,9 +68,12 @@ export default function App() {
               </Link>
             </div>
           </div>
+          <div className="flex items-center justify-center md:hidden">
+            {renderThemeChanger()}
+          </div>
           <div className="md:hidden">
             <button
-              className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
+              className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border dark:text-gray-100"
               onClick={() => setState(!state)}
               aria-label="menu button"
             >
@@ -79,12 +114,12 @@ export default function App() {
             state ? "block" : "hidden"
           }`}
         >
-          <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <ul className="justify-center items-center space-y-8 md:flex md:space-x-4 md:space-y-0">
             {navigation.map((item, idx) => {
               return (
                 <li key={idx} onClick={() => setState(!state)}>
                   <Link legacyBehavior href={item.path}>
-                    <a className="text-gray-600 hover:text-gray-900">
+                    <a className="text-gray-600 hover:text-gray-900 dark:text-gray-100 md:text-sm">
                       {item.title}
                     </a>
                   </Link>
@@ -92,6 +127,9 @@ export default function App() {
               );
             })}
           </ul>
+        </div>
+        <div className="md:flex md:items-center md:justify-center hidden md-visible">
+          {renderThemeChanger()}
         </div>
       </div>
     </nav>

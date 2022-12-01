@@ -12,7 +12,7 @@ export function useWindowSize() {
     // only execute all the code below in client side
     // Handler to call on window resize
     function handleResize() {
-      // Set window width/height to state
+      // Set window width/page-height to state
       setWindowSize({
         width: window.innerWidth,
         height: document.querySelector(".site-wrapper").scrollHeight,

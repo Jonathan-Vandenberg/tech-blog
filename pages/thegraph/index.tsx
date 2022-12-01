@@ -5,6 +5,8 @@ import FeaturedPostsByCategory from "../../components/FeaturedPostsByCategory";
 import HeaderCategories from "../../components/HeaderCategories";
 import { getTheGraphPosts } from "../../services";
 import { useState } from "react";
+import { useWindowSize } from "../../utils/windowSize";
+import { BackgroundSVG } from "../../components/icons/icons";
 
 export default function Index({ posts }: any) {
   const [addPosts, setAddPosts] = useState(6);
@@ -15,19 +17,21 @@ export default function Index({ posts }: any) {
     } else setDisableButton(true);
   };
 
+  const size = useWindowSize();
+
   return (
     <>
       <Head>
-        <title>SEO</title>
+        <title>The Graph</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
+          content="Information on leading web2 and web3 frameworks"
         ></meta>
         <meta property="og:title" content="SEO" />
         <meta
           property="og:description"
-          content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
+          content="Information on leading web2 and web3 frameworks"
         />
         <meta
           property="og:image"
@@ -42,7 +46,8 @@ export default function Index({ posts }: any) {
           "An indexing protocol for querying networks like Ethereum and IPFS"
         }
       />
-      <section>
+      <section className="site-wrapper relative">
+        
         <div className="container max-w-6xl font-semi-bold text-gray-600 mx-auto text-2xl pt-12 pb-2 px-6">
           Featured Posts
         </div>

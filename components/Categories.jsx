@@ -12,12 +12,12 @@ import Link from "next/link";
 
 export default function App() {
   return (
-    <div className="container mx-auto py-2 bg-white/40">
-      <section className="px-6 pb-8 text-gray-800">
-        <div className="grid lg:grid-cols-4 gap-6">
+    <div className="container mx-auto dark:bg-slate-900 xl:dark:bg-transparent rounded-md">
+      <section className="px-6 text-gray-800">
+        <div className="grid md:grid-cols-4 gap-6">
           <Link legacyBehavior href={"/solidity"}>
             <div
-              className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -34,7 +34,7 @@ export default function App() {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   <div className="flex justify-start items-end h-full">
-                    <h5 className="text-md font-bold text-gray-900 m-2">
+                    <h5 className="text-md font-bold text-gray-900 m-2 dark:text-gray-200">
                       Solidity
                     </h5>
                   </div>
@@ -52,7 +52,7 @@ export default function App() {
           <Link legacyBehavior href={"/hardhat"}>
             <a aria-label="hardhat">
               <div
-                className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -70,7 +70,9 @@ export default function App() {
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
                     <div className="flex justify-start items-end h-full">
-                      <h5 className="text-md font-bold m-2">Hardhat</h5>
+                      <h5 className="text-md font-bold m-2 dark:text-gray-200">
+                        Hardhat
+                      </h5>
                     </div>
                   </div>
                   <div className="hover-overlay">
@@ -87,7 +89,7 @@ export default function App() {
           <Link legacyBehavior href={"/thegraph"}>
             <a aria-label="thegraph">
               <div
-                className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -96,7 +98,7 @@ export default function App() {
                   <Image
                     alt="categories image trends"
                     src={theGraphImage}
-                    className="w-full transition duration-300 ease-linear align-middle p-12"
+                    className="w-full transition duration-300 ease-linear align-middle p-9 lg:p-12"
                   />
                 </div>
                 <a href="#!">
@@ -105,7 +107,9 @@ export default function App() {
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
                     <div className="flex justify-start items-end h-full">
-                      <h5 className="text-md font-bold m-2">The Graph</h5>
+                      <h5 className="text-md font-bold m-2 dark:text-gray-200">
+                        The Graph
+                      </h5>
                     </div>
                   </div>
                   <div className="hover-overlay">
@@ -121,7 +125,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/security"}>
             <div
-              className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -138,7 +142,7 @@ export default function App() {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   <div className="flex justify-start items-end h-full">
-                    <h5 className="text-md font-bold text-gray-900 m-2">
+                    <h5 className="text-md font-bold text-gray-900 m-2 dark:text-gray-200">
                       Security
                     </h5>
                   </div>
@@ -156,7 +160,7 @@ export default function App() {
           <Link legacyBehavior href={"/nextjs"}>
             <a aria-label="seo">
               <div
-                className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -174,7 +178,9 @@ export default function App() {
                     // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                   >
                     <div className="flex justify-start items-end h-full">
-                      <h5 className="text-md font-bold m-2">NextJS</h5>
+                      <h5 className="text-md font-bold m-2 dark:text-gray-200">
+                        NextJS
+                      </h5>
                     </div>
                   </div>
                   <div className="hover-overlay">
@@ -190,7 +196,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/javascript"}>
             <div
-              className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -207,7 +213,7 @@ export default function App() {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   <div className="flex justify-start items-end h-full">
-                    <h5 className="text-md font-bold text-gray-900 m-2">
+                    <h5 className="text-md font-bold text-gray-900 m-2 dark:text-gray-200">
                       Javascript
                     </h5>
                   </div>
@@ -224,7 +230,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/styling"}>
             <div
-              className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -241,7 +247,7 @@ export default function App() {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   <div className="flex justify-start items-end h-full">
-                    <h5 className="text-md font-bold text-gray-900 m-2">
+                    <h5 className="text-md font-bold text-gray-900 m-2 dark:text-gray-200">
                       Styling
                     </h5>
                   </div>
@@ -258,7 +264,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/graphql"}>
             <div
-              className="zoom shadow-md relative overflow-hidden bg-no-repeat bg-cover"
+              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -274,7 +280,7 @@ export default function App() {
                   // style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
                 >
                   <div className="flex justify-start items-end h-full">
-                    <h5 className="text-md font-bold text-gray-900 m-2">
+                    <h5 className="text-md font-bold text-gray-900 m-2 dark:text-gray-200">
                       GraphQL
                     </h5>
                   </div>

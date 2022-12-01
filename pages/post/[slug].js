@@ -8,14 +8,10 @@ import Post from "../../components/Post";
 import BreadCrumbs from "../../components/BreadCrumbs.tsx";
 import RelatedPosts from "../../components/RelatedPosts.tsx";
 import Link from "next/link";
-import { CopyIcon } from "../../components/icons/icons";
 import Prism from "prismjs";
 import "prismjs/plugins/line-numbers/prism-line-numbers";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
-import CopyToClipboard from "react-copy-to-clipboard";
-import { renderToString } from "react-dom/server";
-import reactToString from "react-to-string";
 
 import { getPostDetails, getPosts } from "../../services";
 
@@ -32,7 +28,7 @@ const PostDetails = ({ post }) => {
   }
 
   return (
-    <>
+    <div className="pt-24">
       {/* <Head>
         {post?.seo?.title && <title>{post.seo.title}</title>}
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -55,48 +51,50 @@ const PostDetails = ({ post }) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head> */}
-      <div className="mx-auto lg:max-w-[730px] px-6 bg-white border-4 border-gray-100 mt-20">
-        <div className="pt-6">
+      <div className="mx-auto lg:max-w-[730px] px-2 md:px-6 bg-white dark:bg-slate-800 border-4 border-gray-100 dark:border-gray-700">
+        <div className="py-3">
           <BreadCrumbs postCategory={post.category} title={post.title} />
         </div>
         <Post
           post={post}
           content={
-            <div className="text-black">
+            <div className="text-black dark:text-gray-200">
               <RichText
                 className="text-black"
                 content={post.content.raw.children}
                 renderers={{
                   h1: ({ children }) => (
-                    <h1 className="text-gray-700 text-3xl font-semibold py-4">
+                    <h1 className="text-gray-700 text-3xl font-semibold py-4 dark:text-gray-200">
                       {children}
                     </h1>
                   ),
                   h2: ({ children }) => (
-                    <h2 className="pt-4 text-gray-700 font-semibold text-2xl">
+                    <h2 className="pt-4 text-gray-700 font-semibold text-2xl dark:text-gray-200">
                       {children}
                     </h2>
                   ),
                   h3: ({ children }) => (
-                    <h3 className="py-4 text-gray-700 font-semibold text-xl">
+                    <h3 className="py-4 text-gray-700 font-semibold text-xl dark:text-gray-200">
                       {children}
                     </h3>
                   ),
                   bold: ({ children }) => (
-                    <strong className="text-xl">{children}</strong>
+                    <strong className="text-xl dark:text-gray-200">
+                      {children}
+                    </strong>
                   ),
                   ol: ({ children }) => (
-                    <ol className="py-4 space-y-3 ml-12 text-gray-800 list-decimal text-xl">
+                    <ol className="py-4 space-y-3 ml-12 text-gray-800 list-decimal text-xl dark:text-gray-200">
                       {children}
                     </ol>
                   ),
                   ul: ({ children }) => (
-                    <ul className="py-1 md:py-2 lg:py-4 text-gray-700 text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem] space-y-3 md:space-y-4 lg:space-y-5 ml-12 list-disc ">
+                    <ul className="py-1 md:py-2 lg:py-4 text-gray-700 text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] space-y-3 md:space-y-4 lg:space-y-5 ml-12 list-disc dark:text-gray-200">
                       {children}
                     </ul>
                   ),
                   p: ({ children, className }) => (
-                    <p className="py-3 md:py-4 lg:py-5 text-gray-700 text-[1.15rem] md:text-[1.2rem] lg:text-[1.3rem]">
+                    <p className="py-3  md:py-4 lg:py-5 text-gray-700 text-[1rem] md:text-[1.2rem] lg:text-[1.3rem] dark:text-gray-300">
                       {children}
                     </p>
                   ),
@@ -104,14 +102,14 @@ const PostDetails = ({ post }) => {
                     <Link legacyBehavior href={href}>
                       <a
                         aria-label={title}
-                        className="py-4 text-blue-600 text-xl cursor-pointer"
+                        className="py-4 text-blue-600 text-xl cursor-pointer dark:text-blue-300"
                       >
                         {children}
                       </a>
                     </Link>
                   ),
                   blockquote: ({ children }) => (
-                    <blockquote className="my-6 py-2 text-gray-800 text-xl border-l-[6px] pl-3 border-gray-300">
+                    <blockquote className="my-6 py-2 text-gray-800 text-xl border-l-[6px] pl-3 border-gray-300 dark:text-gray-300">
                       <p>{children}</p>
                     </blockquote>
                   ),
@@ -127,20 +125,12 @@ const PostDetails = ({ post }) => {
                     </div>;
                   },
                   code: ({ children }) => (
-                    <code className="text-red-500 text-[1.1rem] border-2 border-gray-200 p-0.5">
+                    <code className="text-red-500 dark:text-red-400 md:text-[1.1rem] text-[1rem]">
                       {children}
                     </code>
                   ),
                   code_block: ({ children }) => (
                     <pre className="line-numbers language-javascript code">
-                      {/* <CopyToClipboard
-                        text={children.toString()}
-                        onCopy={() => setCopied(true)}
-                      >
-                        <button className="icon copy-icon">
-                          {<CopyIcon />}
-                        </button>
-                      </CopyToClipboard> */}
                       <code>{children}</code>
                     </pre>
                   ),
@@ -151,7 +141,7 @@ const PostDetails = ({ post }) => {
         />
       </div>
       <RelatedPosts slug={post.slug} category={post.category} />
-    </>
+    </div>
   );
 };
 export default PostDetails;

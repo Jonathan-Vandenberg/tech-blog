@@ -4,18 +4,17 @@ import Link from "next/link";
 
 export default function App({ content, post }: any) {
   return (
-    <article className="max-w-2xl pb-6 mx-auto mt-6 text-gray-700">
-      <div className="w-full mx-auto text-center border-y-4 border-gray-200 py-4">
+    <article className="max-w-2xl mx-auto text-gray-700 dark:text-gray-200">
+      <div className="w-full mx-auto text-center border-y-4 border-gray-200 dark:border-slate-700 py-4">
         {post?.category && (
-          <p className="text-xs font-semibold tracking-wider uppercase">
+          <p className="text-xs font-semibold tracking-wider uppercase dark:text-gray-300">
             #{post.category}
           </p>
         )}
-        <h1 className="text-4xl font-bold leading-tight md:text-5xl">
+        <h1 className="text-3xl lg:text-4xl font-bold leading-tight md:text-5xl">
           {post.title}
         </h1>
-        <div className="text-sm text-gray-600 mt-2 flex items-center justify-center">
-          by
+        <div className="text-sm text-gray-600 mt-2 flex items-center justify-center dark:text-gray-300">
           <a
             rel="noopener noreferrer"
             href="mailto:jonvdberg8@gmail.com"
@@ -28,7 +27,7 @@ export default function App({ content, post }: any) {
         </div>
       </div>
       <div className="text-gray-500">{content}</div>
-      <div className="py-8 border-y dark:border-gray-700">
+      {/* <div className="py-8 border-y dark:border-gray-700">
         <Link legacyBehavior href="mailto:jonvdberg8@gmail.com">
           <div className="text-gray-500 border-2 hover:border-gray-800 hover:text-gray-800 border-gray-400 px-4 py-2 flex items-center justify-center space-x-2 w-32 mx-auto">
             <p>Contact</p>
@@ -41,7 +40,7 @@ export default function App({ content, post }: any) {
             </svg>
           </div>
         </Link>
-      </div>
+      </div> */}
     </article>
   );
 }

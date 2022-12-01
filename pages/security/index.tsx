@@ -18,16 +18,16 @@ export default function Index({ posts }: any) {
   return (
     <>
       <Head>
-        <title>SECURITY</title>
+        <title>Smart Contract Security</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
+          content="Information on leading web2 and web3 frameworks"
         ></meta>
         <meta property="og:title" content="SECURITY" />
         <meta
           property="og:description"
-          content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
+          content="Information on leading web2 and web3 frameworks"
         />
         <meta
           property="og:image"
