@@ -23,7 +23,7 @@ export default function Index({ posts }: any) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="Information for alternative options to a wide variety of topics including self development, health, technology, travel, news and trends."
+          content="Information including self development, health, technology, travel, news and trends."
         ></meta>
         <meta
           property="og:title"
