@@ -45,7 +45,7 @@ export default function Index({ posts }: any) {
           Featured Posts
         </div>
         <div className="container max-w-6xl px-6 mx-auto space-y-6 sm:space-y-12">
-          <FeaturedPostsByCategory category="SEO" />
+          <FeaturedPostsByCategory category="NEXTJS" />
           <div className="">
             <div className="font-semi-bold text-gray-600 text-2xl mb-2">
               All Posts

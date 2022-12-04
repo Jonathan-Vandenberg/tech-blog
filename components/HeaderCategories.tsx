@@ -83,7 +83,7 @@ export default function App({
           />
         </div>
         <div className="relative">
-          <div className="p-6 z-20 relative pb-6 m-4 mx-auto -mt-12 lg:max-w-2xl sm:px-10 sm:mx-12 bg-gray-50 dark:bg-slate-600">
+          <div className="p-6 z-20 relative pb-6 m-4 mx-auto -mt-12 lg:max-w-2xl sm:px-10 sm:mx-12 bg-gray-50 dark:bg-slate-600 border-2 border-black dark:border-none">
             <div className="flex items-start justify-center flex-col">
               <p className="inline-block text-2xl font-semibold sm:text-3xl text-gray-800 dark:text-gray-300">
                 {categoryName}

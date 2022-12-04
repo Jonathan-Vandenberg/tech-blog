@@ -38,9 +38,7 @@ export default function Index({ posts }: any) {
       </Head>
       <HeaderCategories
         categoryName={"SOLIDITY"}
-        categoryDescription={
-          "An object-oriented, high-level language for implementing smart contracts."
-        }
+        categoryDescription={"Implementing smart contracts."}
       />
       <section>
         <div className="container max-w-6xl font-semi-bold text-gray-600 mx-auto text-2xl pt-12 pb-2 px-6">
