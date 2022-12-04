@@ -17,7 +17,7 @@ export default function App() {
         <div className="grid md:grid-cols-4 gap-6">
           <Link legacyBehavior href={"/solidity"}>
             <div
-              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+              className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -52,7 +52,7 @@ export default function App() {
           <Link legacyBehavior href={"/hardhat"}>
             <a aria-label="hardhat">
               <div
-                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+                className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -89,7 +89,7 @@ export default function App() {
           <Link legacyBehavior href={"/thegraph"}>
             <a aria-label="thegraph">
               <div
-                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+                className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -125,7 +125,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/security"}>
             <div
-              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+              className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -160,7 +160,7 @@ export default function App() {
           <Link legacyBehavior href={"/nextjs"}>
             <a aria-label="seo">
               <div
-                className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+                className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
                 style={{ backgroundPosition: "50%" }}
                 data-mdb-ripple="true"
                 data-mdb-ripple-color="dark"
@@ -196,7 +196,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/javascript"}>
             <div
-              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+              className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -230,7 +230,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/styling"}>
             <div
-              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+              className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"
@@ -264,7 +264,7 @@ export default function App() {
 
           <Link legacyBehavior href={"/graphql"}>
             <div
-              className="zoom shadow-md relative dark:bg-slate-600 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
+              className="zoom shadow-md relative dark:bg-sky-800 rounded-md overflow-hidden bg-no-repeat bg-cover bg-white/50"
               style={{ backgroundPosition: "50%" }}
               data-mdb-ripple="true"
               data-mdb-ripple-color="dark"

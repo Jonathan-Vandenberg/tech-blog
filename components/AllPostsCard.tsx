@@ -9,7 +9,7 @@ export default function App({ post }: any) {
           <a area-label="post cover image">
             <img
               role="presentation"
-              className="object-cover w-full rounded-md h-44 dark:bg-slate-800"
+              className="object-cover w-full rounded-md h-44 bg-gray-200"
               src={post.coverImage.url}
               alt={`Cover-image: ${post.title}`}
             />

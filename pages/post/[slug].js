@@ -51,7 +51,7 @@ const PostDetails = ({ post }) => {
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
       </Head> */}
-      <div className="mx-auto lg:max-w-[730px] px-2 md:px-6 bg-white dark:bg-slate-800 border-4 border-gray-100 dark:border-gray-700">
+      <div className="mx-auto lg:max-w-[730px] px-2 md:px-6 bg-white dark:bg-slate-800 border-4 border-gray-200 dark:border-gray-700">
         <div className="py-3">
           <BreadCrumbs postCategory={post.category} title={post.title} />
         </div>

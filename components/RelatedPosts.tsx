@@ -33,19 +33,22 @@ export default function RelatedPost({
             <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
               {data
                 .map((post: any, index: number) => (
-                  <article key={index} className="flex flex-col">
+                  <article
+                    key={index}
+                    className="flex flex-col border-2 border-black"
+                  >
                     {post?.coverImage?.url && (
                       <Link legacyBehavior href={`/post/${post.slug}`}>
                         <a aria-label={post.title}>
                           <img
                             alt={post.title}
-                            className="object-cover w-full h-52 dark:bg-gray-500"
+                            className="object-cover w-full h-52 bg-gray-200"
                             src={post.coverImage.url}
                           />
                         </a>
                       </Link>
                     )}
-                    <div className="flex flex-col flex-1 p-6">
+                    <div className="flex flex-col flex-1 p-6 dark:bg-slate-800 border-t-2 border-black bg-white/50">
                       <Link legacyBehavior href={`/post/${post.slug}`}>
                         <a className="text-xs tracking-wider uppercase hover:underline text-gray-800 dark:text-gray-200">
                           {post.title}

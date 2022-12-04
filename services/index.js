@@ -159,7 +159,10 @@ export const getJavascriptPosts = async () => {
 export const getStylingPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: STYLING, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: STYLING, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -186,7 +189,10 @@ export const getStylingPosts = async () => {
 export const getSolidityPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: SOLIDITY, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: SOLIDITY, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -213,7 +219,10 @@ export const getSolidityPosts = async () => {
 export const getTheGraphPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: THEGRAPH, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: THEGRAPH, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -240,7 +249,10 @@ export const getTheGraphPosts = async () => {
 export const getNextJSPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: NEXTJS, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: NEXTJS, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -267,7 +279,10 @@ export const getNextJSPosts = async () => {
 export const getHardhatPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: HARDHAT, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: HARDHAT, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -294,7 +309,10 @@ export const getHardhatPosts = async () => {
 export const getGraphqlPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: GRAPHQL, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: GRAPHQL, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
@@ -321,7 +339,10 @@ export const getGraphqlPosts = async () => {
 export const getSecurityPosts = async () => {
   const query = gql`
     query MyQuery {
-      postsConnection(where: { category: SECURITY, AND: { featured: false } }) {
+      postsConnection(
+        where: { category: SECURITY, AND: { featured: false } }
+        orderBy: createdAt_DESC
+      ) {
         edges {
           node {
             content {
