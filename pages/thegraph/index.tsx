@@ -42,12 +42,9 @@ export default function Index({ posts }: any) {
       </Head>
       <HeaderCategories
         categoryName={"THEGRAPH"}
-        categoryDescription={
-          "An indexing protocol for querying networks like Ethereum and IPFS"
-        }
+        categoryDescription={"Querying Ethereum Network"}
       />
       <section className="site-wrapper relative">
-        
         <div className="container max-w-6xl font-semi-bold text-gray-600 mx-auto text-2xl pt-12 pb-2 px-6">
           Featured Posts
         </div>
