@@ -47,17 +47,17 @@ export default function RelatedPost({
                     )}
                     <div className="flex flex-col flex-1 p-6">
                       <Link legacyBehavior href={`/post/${post.slug}`}>
-                        <a className="text-xs tracking-wider uppercase hover:underline text-gray-800">
+                        <a className="text-xs tracking-wider uppercase hover:underline text-gray-800 dark:text-gray-200">
                           {post.title}
                         </a>
                       </Link>
 
                       <Link legacyBehavior href={`/post/${post.slug}`}>
-                        <h3 className="flex-1 py-2 text-lg font-semibold leading-snug text-gray-700 cursor-pointer">
+                        <h3 className="flex-1 py-2 text-lg font-semibold leading-snug text-gray-700 cursor-pointer dark:text-gray-300">
                           {post.excerpt}
                         </h3>
                       </Link>
-                      <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-gray-500">
+                      <div className="flex flex-wrap justify-between pt-3 space-x-2 text-xs text-gray-500 dark:text-gray-300">
                         <span className="align-middle">
                           {moment(post.createdAt).format("MMM DD, YYYY")}
                         </span>
