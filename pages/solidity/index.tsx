@@ -24,7 +24,7 @@ export default function Index({ posts }: any) {
           name="description"
           content="Information on leading web2 and web3 frameworks"
         ></meta>
-        <meta property="og:title" content="Trends" />
+        <meta property="og:title" content="SOLIDITY" />
         <meta
           property="og:description"
           content="Information on leading web2 and web3 frameworks"

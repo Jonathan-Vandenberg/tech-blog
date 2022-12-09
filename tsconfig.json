@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2017",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -20,7 +20,8 @@
     "**/*.ts",
     "**/*.tsx",
     "pages/post/[slug].js",
-    "pages/code.jsx"
+    "pages/code.jsx",
+    "pages/compile.js"
   ],
   "exclude": ["node_modules"]
 }

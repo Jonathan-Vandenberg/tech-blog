@@ -31,7 +31,7 @@ export default function Index({ posts }: any) {
         />
         <meta
           property="og:description"
-          content="Information for alternative optioelopment, health, technology, travel, news and trends."
+          content="Information for alternative optio2elopment, health, technology, travel, news and trends."
         />
         <meta
           property="og:image"
